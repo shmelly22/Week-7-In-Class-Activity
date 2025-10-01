@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Week 7 In-Class Activity</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="light">
+  <div class="wrap">
+    <h1>Theme Changer</h1>
+    <div class="row">
+      <button type="button" onclick="setTheme('light')">Light</button>
+      <button type="button" onclick="setTheme('dark')">Dark</button>
+    </div>
+  </div>
+<script>
+    //Save user's theme choice
+    function setTheme(theme) {
+        if (theme !== 'light' && theme !== 'dark') return;
+        localStorage.setItem('userTheme', theme);
+        document.body.className = theme;
+    }
+
+    //Load saved theme on page load
+    window.addEventListener('load', function() {
+        var savedTheme = localStorage.getItem('userTheme') || 'light';
+        document.body.className = savedTheme;
+    });
+</script>
+</body>
+</html>
