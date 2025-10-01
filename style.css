@@ -1,0 +1,35 @@
+body { 
+    display:flex; 
+    align-items:center; 
+    justify-content:center; 
+}
+
+.wrap { 
+    text-align:center; 
+    padding:1rem; 
+    border:1px solid #ccc; 
+}
+
+.row { 
+    display:flex; 
+    gap:.5rem; 
+    justify-content:center; 
+    margin-top:1rem; 
+}
+
+button { 
+    padding:.5rem 1rem; 
+    border:1px solid #888; 
+    background:#eee; 
+    cursor:pointer; 
+}
+
+body.light { 
+    background:#ffffff; 
+    color:#111; 
+}
+
+body.dark  { 
+    background:#0f172a; 
+    color:#f8fafc; 
+}
